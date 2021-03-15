@@ -1,0 +1,122 @@
+.app,
+.application {
+  font-family: 'Verdana', sans-serif;
+  line-height: 1.5;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 16px;
+}
+
+h4,
+h5,
+h6 {
+  font-size: 14px;
+}
+
+.special-font {
+  font-family: 'Verdana', sans-serif !important;
+}
+
+.vidaxl-link-1,
+.vidaxl-link-2 {
+  color: $black;
+  text-decoration: none;
+
+  &:hover {
+    color: $purple;
+    text-decoration: underline;
+  }
+}
+
+.vidaxl-link-2 {
+  text-decoration: underline;
+}
+
+.vidaxl--text {
+  color: $purple !important;
+
+  &.black--text {
+    color: $black !important;
+  }
+
+  &.text--green {
+    color: $green !important;
+  }
+
+  &.green-medium--text {
+    color: $green-medium !important;
+  }
+
+  input,
+  textarea {
+    caret-color: $purple !important;
+  }
+}
+
+.body-1 {
+  label {
+    font-size: 14px !important;
+  }
+}
+
+.black--text {
+  color: $black !important;
+
+  a {
+    @extend .black--text;
+  }
+}
+
+.italic--text {
+  font-style: italic !important;
+}
+
+.secondary--text {
+  i,
+  span,
+  a,
+  div {
+    color: $grey-medium !important;
+  }
+}
+
+.primary--text {
+  i,
+  span,
+  a,
+  div {
+    color: $purple !important;
+  }
+}
+
+.white--text {
+  i,
+  span,
+  a,
+  div {
+    color: $white !important;
+  }
+}
+
+.text-hover-primary:hover {
+  color: $purple !important;
+
+  @extend .underline;
+}
+
+.white-space-nowrap {
+  white-space: nowrap;
+}
+
+.white-space-pre-wrap {
+  white-space: pre-wrap;
+}

@@ -1,0 +1,21 @@
+@import 'media';
+
+/deep/ .swiper-button-prev {
+  left: -16px;
+  pointer-events: all;
+}
+
+/deep/ .swiper-button-next {
+  right: -16px;
+  pointer-events: all;
+}
+
+@include mobile {
+  /deep/ .swiper-button-prev {
+    left: -4px;
+  }
+
+  /deep/ .swiper-button-next {
+    right: -4px;
+  }
+}

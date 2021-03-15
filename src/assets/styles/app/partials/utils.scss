@@ -1,0 +1,442 @@
+.v-overlay {
+  z-index: 30 !important;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
+.auto-width {
+  width: auto !important;
+}
+
+.fit-height-content {
+  max-height: fit-content !important;
+}
+
+.fit-width-content {
+  max-width: fit-content !important;
+}
+
+.subheading-2 {
+  font-size: 16px !important;
+  font-weight: 600 !important;
+}
+
+.bold {
+  font-weight: bold !important;
+}
+
+.no-underline {
+  text-decoration: none !important;
+
+  a {
+    @extend .no-underline;
+  }
+}
+
+.underline {
+  text-decoration: underline !important;
+}
+
+.text-lowercase {
+  text-transform: lowercase !important;
+
+  &.text-first-letter-uppercase {
+    &::first-letter {
+      text-transform: uppercase !important;
+    }
+  }
+}
+
+.text-transform-none {
+  text-transform: none !important;
+}
+
+.select-none {
+  user-select: none;
+}
+
+.break-word {
+  word-wrap: break-word;
+}
+
+.pointer {
+  cursor: pointer !important;
+}
+
+.pos-relative {
+  position: relative !important;
+}
+
+.pos-fixed {
+  position: fixed !important;
+
+  &.bottom {
+    bottom: 0;
+  }
+
+  &.right {
+    right: 0;
+  }
+
+  &.center {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.top {
+    top: 0;
+  }
+
+  &.left {
+    left: 0;
+  }
+}
+
+.pos-absolute {
+  position: absolute !important;
+
+  &.bottom {
+    bottom: 0;
+  }
+
+  &.right {
+    right: 0;
+  }
+
+  &.center {
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &.top {
+    top: 0;
+  }
+
+  &.left {
+    left: 0;
+  }
+
+  &.top-right-z-index-1 {
+    top: 0;
+    right: 0;
+    z-index: 1;
+  }
+}
+
+.px-half {
+  padding-right: 2px !important;
+  padding-left: 2px !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.crossed {
+  text-decoration: line-through !important;
+}
+
+.z-index-2 {
+  z-index: 2;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  border: 0 !important;
+}
+
+.text-align-right {
+  text-align: right;
+}
+
+.zero-opacity {
+  opacity: 0;
+}
+
+.underline-hover {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.not-allowed {
+  cursor: not-allowed !important;
+}
+
+.full-opacity {
+  opacity: 1 !important;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.border-radius-1 {
+  border-radius: 3px !important;
+}
+
+.border-radius-2 {
+  border-radius: 5px !important;
+}
+
+.align-bottom {
+  align-items: flex-end !important;
+}
+
+.display {
+  &-block {
+    display: block;
+  }
+
+  &-flex {
+    display: flex;
+  }
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.no-hover-background {
+  &:hover {
+    &::before {
+      background-color: transparent !important;
+    }
+  }
+}
+
+.clearfix {
+  &::after {
+    display: table;
+    clear: both;
+    content: "";
+  }
+}
+
+.d-none {
+  display: none !important;
+}
+
+.border {
+  &__bottom {
+    &__dashed {
+      border-bottom: 1px dashed $grey-medium !important;
+    }
+
+    &--grey-light {
+      border-bottom: 1px solid $grey-light !important;
+    }
+  }
+
+  &__top {
+    &__dashed {
+      border-top: 1px dashed $grey-medium !important;
+    }
+  }
+
+  &__radius {
+    &__top {
+      border-top-left-radius: 2px !important;
+      border-top-right-radius: 2px !important;
+    }
+  }
+}
+
+.border-black {
+  border: 1px solid $black;
+}
+
+.ios-overflow {
+  -webkit-overflow-scrolling: touch;
+}
+
+.line-height {
+  line-height: 1;
+
+  &__small {
+    line-height: 5px;
+  }
+}
+
+.vertical-middle {
+  display: table;
+
+  &__inner {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.reset-password,
+.new-password {
+  .v-messages__message {
+    i {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 12px;
+      height: 12px;
+
+      &:not(.error--text) {
+        color: $black !important;
+      }
+    }
+
+    div {
+      &.black--text {
+        color: $black !important;
+      }
+
+      &.text--green {
+        color: $green !important;
+
+        i {
+          color: $green !important;
+        }
+      }
+    }
+  }
+
+  .primary--text {
+    .error--text.last-message,
+    .error--text.last-message i {
+      color: $red !important;
+    }
+  }
+
+  .first-message {
+    padding: 8px 8px 0;
+    border-top: 1px solid $grey-light-2;
+    border-right: 1px solid $grey-light-2;
+    border-left: 1px solid $grey-light-2;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+
+  .second-message {
+    padding: 0 8px;
+    border-right: 1px solid $grey-light-2;
+    border-left: 1px solid $grey-light-2;
+  }
+
+  .third-message,
+  .last-message {
+    padding: 0 8px 8px;
+    border-right: 1px solid $grey-light-2;
+    border-bottom: 1px solid $grey-light-2;
+    border-left: 1px solid $grey-light-2;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+
+  .special-message {
+    .third-message {
+      padding: 0 8px;
+      border-bottom: 0;
+      border-bottom-right-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
+.crossed-yellow {
+  position: relative !important;
+
+  &::after {
+    position: absolute !important;
+    top: auto;
+    right: auto;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 50%;
+    content: '';
+    background-color: $yellow !important;
+  }
+}
+
+.auth-block-shadow {
+  box-shadow:
+    0 3px 1px -2px rgba(0, 0, 0, 0.2),
+    0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12) !important;
+
+  &:active,
+  .isActive {
+    box-shadow:
+      0 5px 5px -3px rgba(0, 0, 0, 0.2),
+      0 8px 10 1px rgba(0, 0, 0, 0.14),
+      0 3px 14px 2px rgba(0, 0, 0, 0.12) !important;
+  }
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.with-checkmark {
+  .v-input__append-inner {
+    display: none !important;
+  }
+
+  .v-input__append-inner .material-icons {
+    font-size: 14px;
+    color: #9c3 !important;
+  }
+
+  .v-icon {
+    transform: none !important;
+  }
+
+  &.v-input--is-dirty:not(.error--text) {
+    .v-input__append-inner {
+      display: block !important;
+    }
+  }
+}
+
+.fixLabel:not(.v-input--is-focused) {
+  .v-label {
+    transform: none;
+  }
+}
+
+.text-error {
+  color: $red !important;
+}
+
+.v-list {
+  &__tile {
+    font-size: 14px;
+  }
+}
+
+.hint-icon {
+  margin-right: 3px;
+  font-size: 14px;
+  vertical-align: -2px;
+}

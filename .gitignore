@@ -1,0 +1,37 @@
+# dependencies
+node_modules
+
+# logs
+npm-debug.log
+local.log
+selenium-debug.log
+
+# Nuxt build
+.nuxt
+
+# Nuxt generate
+dist
+
+# Editor directories and files
+.idea
+
+
+# Auto-generated files
+**/async-components-list.js
+**/helpers/eventBusSchema.json
+
+# Service Worker
+sw.*
+nuxt-sw.js
+
+# Test coverage
+coverage
+.nyc_output
+reports
+
+# AVA Snapshots
+**/tests/snapshots/**
+
+.history
+
+Output.csv

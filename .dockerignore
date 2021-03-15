@@ -1,0 +1,11 @@
+.dockerignore
+.git
+.gitignore
+.nuxt
+.nyc_output
+coverage
+Dockerfile*
+docker-compose*
+node_modules
+npm-debug.log
+README.md

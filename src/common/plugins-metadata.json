@@ -1,0 +1,10 @@
+{
+  "abTastyApiUrl": "//try.abtasty.com/{{code}}.js",
+  "googleTagManagerURL": "//www.googletagmanager.com/gtm.js?id=GTM-KWGTN4G&l=dataLayer",
+  "sentryDSN": "https://8eda31917c8f4676b5ae73adf7493292@o377595.ingest.sentry.io/5209777",
+  "adyenLibURL": "https://checkoutshopper-live.adyen.com/checkoutshopper/sdk/3.5.0/adyen.js",
+  "adyenCssURL": "https://checkoutshopper-live.adyen.com/checkoutshopper/sdk/3.5.0/adyen.css",
+  "flowboxApiKey": "38011d9f4f58d8e0ed8955cd020b6010",
+  "flowboxCheckoutUrl": "//connect.getflowbox.com/bzfy-checkout.js",
+  "googleApiPlatformUrl": "https://apis.google.com/js/platform.js"
+}

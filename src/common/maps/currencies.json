@@ -1,0 +1,158 @@
+{
+  "bg-BG": {
+    "symbol": "лв.",
+    "position": "after",
+    "code": "BGN"
+  },
+  "cs-CZ": {
+    "symbol": "Kč",
+    "position": "after",
+    "code": "CZK"
+  },
+  "da-DK": {
+    "symbol": "DKK",
+    "position": "after",
+    "code": "DKK"
+  },
+  "de-AT": {
+    "symbol": "€",
+    "position": "before",
+    "code": "EUR"
+  },
+  "de-CH": {
+    "symbol": "CHF",
+    "position": "before",
+    "code": "CHF"
+  },
+  "de-DE": {
+    "symbol": "€",
+    "position": "after",
+    "code": "EUR"
+  },
+  "el-GR": {
+    "symbol": "€",
+    "position": "after",
+    "code": "EUR"
+  },
+  "en-AU": {
+    "symbol": "$",
+    "position": "before",
+    "code": "AUD"
+  },
+  "en-GB": {
+    "symbol": "£",
+    "position": "before",
+    "code": "GBP"
+  },
+  "en-IE": {
+    "symbol": "€",
+    "position": "before",
+    "code": "EUR",
+    "noSpace": true
+  },
+  "en-US": {
+    "symbol": "$",
+    "position": "before",
+    "code": "USD"
+  },
+  "es-ES": {
+    "symbol": "€",
+    "position": "after",
+    "code": "EUR"
+  },
+  "et-EE": {
+    "symbol": "€",
+    "position": "before",
+    "code": "EUR"
+  },
+  "fi-FI": {
+    "symbol": "€",
+    "position": "before",
+    "code": "EUR"
+  },
+  "fr-BE": {
+    "symbol": "€",
+    "position": "before",
+    "code": "EUR"
+  },
+  "fr-CH": {
+    "symbol": "CHF",
+    "position": "before",
+    "code": "CHF"
+  },
+  "fr-FR": {
+    "symbol": "€",
+    "position": "after",
+    "code": "EUR"
+  },
+  "hr-HR": {
+    "symbol": "kn",
+    "position": "after",
+    "code": "HRK"
+  },
+  "hu-HU": {
+    "symbol": "Ft",
+    "position": "after",
+    "code": "HUF"
+  },
+  "it-IT": {
+    "symbol": "€",
+    "position": "after",
+    "code": "EUR"
+  },
+  "lt-LT": {
+    "symbol": "€",
+    "position": "after",
+    "code": "EUR"
+  },
+  "lv-LV": {
+    "symbol": "€",
+    "position": "before",
+    "code": "EUR"
+  },
+  "nb-NO": {
+    "symbol": "NOK",
+    "position": "after",
+    "code": "NOK"
+  },
+  "nl-BE": {
+    "symbol": "€",
+    "position": "before",
+    "code": "EUR"
+  },
+  "nl-NL": {
+    "symbol": "€",
+    "position": "before",
+    "code": "EUR"
+  },
+  "pl-PL": {
+    "symbol": "zł",
+    "position": "after",
+    "code": "PLN"
+  },
+  "pt-PT": {
+    "symbol": "€",
+    "position": "after",
+    "code": "EUR"
+  },
+  "ro-RO": {
+    "symbol": "RON",
+    "position": "after",
+    "code": "RON"
+  },
+  "sk-SK": {
+    "symbol": "€",
+    "position": "before",
+    "code": "EUR"
+  },
+  "sl-SI": {
+    "symbol": "€",
+    "position": "before",
+    "code": "EUR"
+  },
+  "sv-SE": {
+    "symbol": "kr",
+    "position": "after",
+    "code": "SEK"
+  }
+}

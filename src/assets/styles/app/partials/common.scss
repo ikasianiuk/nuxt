@@ -1,0 +1,282 @@
+@import "media";
+@import "colors";
+
+#app .v-snack__content {
+  // hotjar overlaps notification link, so it should be a bit higher
+  @include mobileXs {
+    min-height: 80px;
+  }
+
+  //make snackbar's negative space smaller
+  padding: 14px 16px;
+}
+
+.v-dialog {
+  -webkit-overflow-scrolling: touch;
+}
+
+// needed to overlay chat button
+.v-dialog__content {
+  z-index: 1000000 !important;
+}
+
+.v-bottom-sheet.v-dialog {
+  overflow: auto !important;
+}
+
+.skeleton-placeholder {
+  position: relative;
+  overflow: hidden;
+  background: $grey-light;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: '';
+    background: linear-gradient(90deg, $grey-light, lighten($grey-light, 5%), $grey-light);
+    animation: loadingSkeletonPlaceholder 1.3s ease-in-out infinite;
+  }
+}
+
+@keyframes loadingSkeletonPlaceholder {
+  0% {
+    transform: translate3d(-150%, 0, 0);
+  }
+
+  100% {
+    transform: translate3d(150%, 0, 0);
+  }
+}
+
+.blocked-iOS-scroll {
+  position: fixed;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+i {
+  cursor: default;
+}
+
+button {
+  text-transform: none !important;
+}
+
+.caption {
+  font-size: 12px !important;
+  font-weight: 400;
+}
+
+label {
+  color: $black !important;
+}
+
+.application.theme--light {
+  background-color: $white !important;
+}
+
+.primary {
+  background-color: $purple !important;
+  border-color: $purple !important;
+}
+
+.blue {
+  background-color: $blue !important;
+  border-color: $blue !important;
+}
+
+.grey-light {
+  background-color: $grey-light !important;
+  border-color: $grey-light !important;
+}
+
+.background-hover-primary {
+  background-color: $purple !important;
+}
+
+.vidaxl.yellow {
+  background-color: $yellow !important;
+  border-color: $yellow !important;
+}
+
+/* reduced left and right padding for expansion */
+.mini-padding-expansion {
+  .expansion-panel__header {
+    padding: 10px 0;
+  }
+
+  .list__tile,
+  .input-group label {
+    font-size: 14px;
+
+    @extend .no-padding;
+  }
+
+  .list__tile__action {
+    min-width: 40px;
+  }
+}
+
+/* change color of checkbox border to black */
+.input-group.input-group--selection-controls .icon--selection-control {
+  color: $black;
+}
+
+/* fix wrong vuetify checkbox height */
+.input-group.input-group--selection-controls .input-group__input .icon--selection-control {
+  height: 22px;
+}
+
+/* button styles for quantity selector */
+button.narrow {
+  width: 20px;
+  min-width: 20px;
+  height: 20px;
+  line-height: 20px;
+
+  @extend .no-padding;
+  @extend .no-margin;
+
+  &.disabled {
+    opacity: 0.1;
+  }
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+
+  @extend .no-margin;
+}
+
+/* form fix styles */
+.normalized-checkbox {
+  label {
+    line-height: 22px;
+  }
+
+  /* avoid orange color for checkboxes */
+  & .accent--text {
+    color: $purple !important;
+  }
+}
+
+.default-label {
+  label {
+    max-width: 90% !important;
+  }
+}
+
+.radio.input-group label {
+  line-height: 22px;
+}
+
+//TODO: check if styles for 'custom-dropdown--outlined' is still needed after Vuetify update
+// (https://jira.vidaxl.com/browse/PWA-2598), and if not - remove this styles and class from selects in templates
+.custom-dropdown--outlined {
+  .v-input__prepend-outer {
+    margin-top: 10px !important;
+  }
+
+  // in order not to show keyboard on mobile devices as it is not needed there for this kind of selects
+  input {
+    visibility: hidden;
+  }
+
+  .v-input__slot {
+    min-height: 40px !important;
+    border: 1px solid darkgray !important;
+
+    &:hover {
+      border-color: black !important;
+    }
+  }
+
+  .v-label {
+    top: 8px;
+  }
+
+  .v-input__append-inner {
+    align-self: initial !important;
+    margin-top: 0 !important;
+  }
+}
+
+.stepper-content {
+  @media (max-width: 959px) {
+    width: 90% !important;
+  }
+}
+
+//some v-btn elements shouldn't have bg changes when hovered/focused
+.disable-hover-fx {
+  &.v-btn {
+    &:hover,
+    &:focus {
+      &::before {
+        display: none;
+      }
+    }
+  }
+}
+
+.v-menu__content {
+  -webkit-overflow-scrolling: touch;
+}
+
+.theme--light.v-stepper .v-stepper__step--active .v-stepper__label {
+  color: $black !important;
+  text-shadow: none !important;
+}
+
+.v-btn--primary-active {
+  color: $white !important;
+  background: $purple;
+
+  .v-btn__content i {
+    color: $white;
+  }
+}
+
+.v-text-field--bordered {
+  .v-input__slot {
+    height: 100% !important;
+    min-height: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+    border-width: 1px !important;
+    border-right: none !important;
+    border-radius: 2px !important;
+    border-top-right-radius: 0 !important;
+    border-bottom-right-radius: 0 !important;
+  }
+
+  .v-text-field__details {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding-top: 8px !important;
+  }
+
+  .v-input__control {
+    height: 100% !important;
+  }
+
+  input {
+    height: 100%;
+    padding: 0 12px !important;
+    margin-top: 0 !important;
+  }
+}
+
+.v-input--selection-controls .v-input__control {
+  width: 100% !important;
+}
+
+.no-left-borders {
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}

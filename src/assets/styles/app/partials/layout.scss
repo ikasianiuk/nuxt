@@ -1,0 +1,172 @@
+$list-of-breakpoints: lg md sm xs;
+$list-of-ranges: up down;
+$list-of-directions: x y a l r t b;
+$list-of-measures: p m;
+
+@mixin media($width-type, $width-value) {
+  @media (#{$width-type}: #{$width-value}px) {
+    @content;
+  }
+}
+
+@each $breakpoint in $list-of-breakpoints {
+  @each $range in $list-of-ranges {
+    $width: 0;
+    $min-or-max: null;
+
+    @if $breakpoint == xs {
+      $width: 599;
+      $min-or-max: max-width;
+    }
+
+    @if $breakpoint == sm and $range == down {
+      $width: 959;
+      $min-or-max: max-width;
+    }
+
+    @if $breakpoint == sm and $range == up {
+      $width: 601;
+      $min-or-max: min-width;
+    }
+
+    @if $breakpoint == md and $range == down {
+      $width: 1263;
+      $min-or-max: max-width;
+    }
+
+    @if $breakpoint == md and $range == up {
+      $width: 961;
+      $min-or-max: min-width;
+    }
+
+    @if $breakpoint == lg and $range == down {
+      $width: 1903;
+      $min-or-max: max-width;
+    }
+
+    @if $breakpoint == lg and $range == up {
+      $width: 1265;
+      $min-or-max: min-width;
+    }
+
+    @include media($min-or-max, $width) {
+      @for $i from 0 through 5 {
+        @each $measure in $list-of-measures {
+          @each $direction in $list-of-directions {
+
+            $margin-or-padding: $measure;
+            $amount-of-pixels: 0;
+            $result-class: notyet;
+
+            @if $breakpoint != xs {
+              $result-class: #{$measure}#{$direction}-#{$i}-#{$breakpoint}-and-#{$range};
+            }
+
+            @if $breakpoint == xs {
+              $result-class: #{$measure}#{$direction}-#{$i}-#{$breakpoint};
+            }
+
+            @if $measure == p {
+              $margin-or-padding: padding;
+            }
+
+            @if $measure == m {
+              $margin-or-padding: margin;
+            }
+
+            @if $i == 1 {
+              $amount-of-pixels: 4;
+            }
+
+            @if $i == 2 {
+              $amount-of-pixels: 8;
+            }
+
+            @if $i == 3 {
+              $amount-of-pixels: 16;
+            }
+
+            @if $i == 4 {
+              $amount-of-pixels: 24;
+            }
+
+            @if $i == 5 {
+              $amount-of-pixels: 48;
+            }
+
+            .#{$result-class} {
+              @if $direction == a {
+                #{$margin-or-padding}: #{$amount-of-pixels}px !important;
+              }
+
+              @if $direction == b or $direction == y {
+                #{$margin-or-padding}-bottom: #{$amount-of-pixels}px !important;
+              }
+
+              @if $direction == t or $direction == y {
+                #{$margin-or-padding}-top: #{$amount-of-pixels}px !important;
+              }
+
+              @if $direction == l or $direction == x {
+                #{$margin-or-padding}-left: #{$amount-of-pixels}px !important;
+              }
+
+              @if $direction == r or $direction == x {
+                #{$margin-or-padding}-right: #{$amount-of-pixels}px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.xl-same-as-lg {
+  @media screen and (min-width: 1904px) {
+    max-width: 1185px !important;
+  }
+}
+
+.align-bottom-sm-and-up {
+  @media only screen and (min-width: 600px) {
+    align-items: flex-end !important;
+  }
+}
+
+.left-border-md-and-up {
+  @media only screen and (min-width: 960px) {
+    border-left: 1px solid grey;
+  }
+}
+
+// width-1 --> width: 10% etc...
+@for $i from 1 through 20 {
+  .width-#{$i} {
+    width: $i * 5% !important;
+  }
+}
+
+// width-1 --> width: 5% etc...(for mobile)
+@for $i from 1 through 20 {
+  .width-tablet-#{$i} {
+    @include minTablet {
+      width: $i * 5% !important;
+    }
+  }
+}
+
+// width-1 --> width: 5% etc...(for desctop)
+@for $i from 1 through 20 {
+  .width-desktop-#{$i} {
+    @include desktop {
+      width: $i * 5% !important;
+    }
+  }
+}
+
+@for $i from 0 through 20 {
+  .z-index-#{$i} {
+    z-index: $i !important;
+  }
+}
